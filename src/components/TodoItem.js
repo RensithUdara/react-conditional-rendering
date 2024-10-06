@@ -1,22 +1,33 @@
 function TodoItem({ todo, isCompleted }) {
-    if (isCompleted == true) {
-        return (
-            (<div>
-                <div>
-                    {todo} - Completed
-                </div>
-                <br />
-            </div>)
-        );
-    } 
+   
     return (
         (<div>
             <div>
-                {todo} - Pending
+                {todo} - {isCompleted == true ? "Completed" : "Pending"}
             </div>
             <br />
         </div>)
     );
+
+
+    // if (isCompleted == true) {
+    //     return (
+    //         (<div>
+    //             <div>
+    //                 {todo} - Completed
+    //             </div>
+    //             <br />
+    //         </div>)
+    //     );
+    // } 
+    // return (
+    //     (<div>
+    //         <div>
+    //             {todo} - Pending
+    //         </div>
+    //         <br />
+    //     </div>)
+    // );
 
 }
 
