@@ -25,10 +25,14 @@ function TodoList() {
             }}>
                 My Todo List
             </h1>
-            {todos.map((todo) => {
-                return             <TodoItem todo={todo} isCompleted={true} style={{ color: "green", fontWeight: "bold" }} />
-            }      
-        )}
+            {todos.map((todo, index) => {
+                return <TodoItem key={index} todo={todo} isCompleted={true} style={{ color: "green", fontWeight: "bold" }} />
+            }
+            )}
+
+            {/* {todos.map((todo) => (<TodoItem todo={todo} isCompleted={true} style={{ color: "green", fontWeight: "bold" }} />
+            ))} */}
+
             {/* <TodoItem todo="Go Shopping" isCompleted={true} style={{ color: "green", fontWeight: "bold" }} />
             <TodoItem todo="Do Homework" isCompleted={false} style={{ color: "red", textDecoration: "line-through" }} />
             <TodoItem todo="Do the assignment" isCompleted={true} style={{ color: "green", fontWeight: "bold" }} />
