@@ -1,10 +1,29 @@
 import TodoItem from "./TodoItem";
 
+// const todos = [
+//     "Go Shopping",
+//     "Do Homework",
+//     "Do the assignment",
+//     "Play cricket",
+// ]
+
 const todos = [
-    "Go Shopping",
-    "Do Homework",
-    "Do the assignment",
-    "Play cricket",
+    {
+        name: "Go Shopping",
+        isCompleted: true
+    },
+    {
+        name: "Do Homework",
+        isCompleted: false
+    },
+    {
+        name: "Do the assignment",
+        isCompleted: false
+    },
+    {
+        name: "Play cricket",
+        isCompleted: true
+    }
 ]
 
 function TodoList() {
@@ -26,7 +45,7 @@ function TodoList() {
                 My Todo List
             </h1>
             {todos.map((todo, index) => {
-                return <TodoItem key={index} todo={todo} isCompleted={true} style={{ color: "green", fontWeight: "bold" }} />
+                return <TodoItem key={index} todo={todo.name} isCompleted={todo.isCompleted} style={{ color: "green", fontWeight: "bold" }} />
             }
             )}
 
